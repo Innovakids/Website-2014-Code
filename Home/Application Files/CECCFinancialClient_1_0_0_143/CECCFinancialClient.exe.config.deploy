@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<configuration>
+
+  <configSections>
+    <section name="ideablade.configuration" type="IdeaBlade.Core.Configuration.IdeaBladeSection, IdeaBlade.Core"/>
+  </configSections>
+  <ideablade.configuration version="6.00" xmlns="http://schemas.ideablade.com/2010/IdeaBladeConfig">
+
+    <logging logFile="log\DebugLog.xml"/>
+   
+
+  </ideablade.configuration>
+
+    <!-- 
+      REMOVE CONNECTION STRING ELEMENT IN 3-TIER PRODUCTION DEPLOYMENT 
+      Client does not connect to the database in n-Tier deployment
+      Connection string is required in 2 tier (non-distributed) deployment
+      where client does connect directly to the database.
+     -->  
+  
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0,Profile=Client"/></startup><system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_IService12" maxBufferPoolSize="20000000"
+          maxBufferSize="20000000" maxReceivedMessageSize="20000000" />
+        <binding name="BasicHttpBinding_IService1" />
+      </basicHttpBinding>
+      <customBinding>
+        <binding name="CustomBinding_DataAccessWCFService">
+          <binaryMessageEncoding />
+          <httpTransport />
+        </binding>
+      </customBinding>
+      <wsHttpBinding>
+        <binding name="WSHttpBinding_IStock" />
+      </wsHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://it86168.sbcss.org/CECCFinancialWcfService/Service1.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IService12"
+        contract="ServiceReference5.IService1" name="BasicHttpBinding_IService1" />
+      <endpoint address="http://www.ilearningsystem.com/DataAccessWCFService.svc"
+        binding="customBinding" bindingConfiguration="CustomBinding_DataAccessWCFService"
+        contract="ServiceReference7.DataAccessWCFService" name="CustomBinding_DataAccessWCFService" />
+    </client>
+  </system.serviceModel>
+</configuration>
