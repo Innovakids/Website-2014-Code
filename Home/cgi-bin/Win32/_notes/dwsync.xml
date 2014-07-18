@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="activeperl-copy.pl" server="ftp.innovakids.com" local="130468967442660252" remote="128635164000000000" Dst="2" />
+<file name="connect.cpp" server="ftp.innovakids.com" local="130468967449320252" remote="128635164000000000" Dst="2" />
+<file name="CommonInclude.h" server="ftp.innovakids.com" local="130468967450230252" remote="128635164000000000" Dst="2" />
+<file name="convenience.cpp" server="ftp.innovakids.com" local="130468967451010252" remote="128635164000000000" Dst="2" />
+<file name="connect.h" server="ftp.innovakids.com" local="130468967452040252" remote="128635164000000000" Dst="2" />
+<file name="datatypemap.cpp" server="ftp.innovakids.com" local="130468967452190252" remote="128635164000000000" Dst="2" />
+<file name="convenience.h" server="ftp.innovakids.com" local="130468967453250252" remote="128635164000000000" Dst="2" />
+<file name="datetime.cpp" server="ftp.innovakids.com" local="130468967454070252" remote="128635164000000000" Dst="2" />
+<file name="datetime.h" server="ftp.innovakids.com" local="130468967454270252" remote="128635164000000000" Dst="2" />
+<file name="datatypemap.h" server="ftp.innovakids.com" local="130468967455090252" remote="128635164000000000" Dst="2" />
+<file name="errcheck.h" server="ftp.innovakids.com" local="130468967455300252" remote="128635164000000000" Dst="2" />
+<file name="errcheck.cpp" server="ftp.innovakids.com" local="130468967455440252" remote="128635164000000000" Dst="2" />
+<file name="getdata.cpp" server="ftp.innovakids.com" local="130468967456890252" remote="128635164000000000" Dst="2" />
+<file name="handleattributes.cpp" server="ftp.innovakids.com" local="130468967457060252" remote="128635164000000000" Dst="2" />
+<file name="handleattributes.h" server="ftp.innovakids.com" local="130468967458060252" remote="128635164000000000" Dst="2" />
+<file name="getdata.h" server="ftp.innovakids.com" local="130468967458780252" remote="128635164000000000" Dst="2" />
+<file name="History.html" server="ftp.innovakids.com" local="130468967460620252" remote="128635164000000000" Dst="2" />
+<file name="init.cpp" server="ftp.innovakids.com" local="130468967461370252" remote="128635164000000000" Dst="2" />
+<file name="init.h" server="ftp.innovakids.com" local="130468967462360252" remote="128635164000000000" Dst="2" />
+<file name="internaldata.cpp" server="ftp.innovakids.com" local="130468967462500252" remote="128635164000000000" Dst="2" />
+<file name="internaldata.h" server="ftp.innovakids.com" local="130468967463550252" remote="128635164000000000" Dst="2" />
+<file name="makefile.pl" server="ftp.innovakids.com" local="130468967465640252" remote="128635164000000000" Dst="2" />
+<file name="MANIFEST" server="ftp.innovakids.com" local="130468967468050252" remote="128635164000000000" Dst="2" />
+<file name="META.yml" server="ftp.innovakids.com" local="130468967468170252" remote="128635164000000000" Dst="2" />
+<file name="README.html" server="ftp.innovakids.com" local="130468967469700252" remote="128635164000000000" Dst="2" />
+<file name="senddata.h" server="ftp.innovakids.com" local="130468967470640252" remote="128635164000000000" Dst="2" />
+<file name="senddata.cpp" server="ftp.innovakids.com" local="130468967470790252" remote="128635164000000000" Dst="2" />
+<file name="SqlServer.xs" server="ftp.innovakids.com" local="130468967471950252" remote="128635164000000000" Dst="2" />
+<file name="SqlServer.pm" server="ftp.innovakids.com" local="130468967474060252" remote="128635164000000000" Dst="2" />
+<file name="tableparam.cpp" server="ftp.innovakids.com" local="130468967499240252" remote="128635164000000000" Dst="2" />
+<file name="tableparam.h" server="ftp.innovakids.com" local="130468967499520252" remote="128635164000000000" Dst="2" />
+<file name="Tests.html" server="ftp.innovakids.com" local="130468967500880252" remote="128635164000000000" Dst="2" />
+<file name="utils.cpp" server="ftp.innovakids.com" local="130468967501750252" remote="128635164000000000" Dst="2" />
+<file name="utils.h" server="ftp.innovakids.com" local="130468967503650252" remote="128635164000000000" Dst="2" />
+<file name="Win32-SqlServer.html" server="ftp.innovakids.com" local="130468967503890252" remote="128635164000000000" Dst="2" />
+<file name="Win32-SqlServer.pod" server="ftp.innovakids.com" local="130468967504900252" remote="128635164000000000" Dst="2" />
+</dwsync>

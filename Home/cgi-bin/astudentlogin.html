@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Innovakids.com  - Online Schools</title>
+<META NAME="title" CONTENT="Learning, Society, Economy:Department">
+<META NAME="language" CONTENT="en">
+<META NAME="description" CONTENT="Innovakids.com, Online Classroom, Online School, webbased school,Classroom">
+<META NAME="keywords" CONTENT="Innovakids.com, Online Classroom, Online School, webbased school,Classroom">
+
+
+<link rel="stylesheet" href="andreas09.css" type="text/css" media="screen" />
+<style type="text/css">
+
+/* This is only a demonstration of the included colors in the andreas09 template. Don't use this file as a starting point when you use the template, use the included index.html or 2col.html instead! */
+
+#container{background:#f0f0f0 url(alt-img/bodybg-green.jpg) repeat-x;}
+#mainmenu a:hover{background:#f0f0f0 url(alt-img/menuhover-green.jpg) top left repeat-x;}
+#mainmenu a.current{background:#f0f0f0 url(alt-img/menuhover-green.jpg) top left repeat-x;}
+</style>
+<style type="text/css">
+<!--
+.style1 {color: #0000CC}
+.style13 {font-size: 10px;
+	color: #FF0000;
+}
+.style12 {color: #3399FF; font-size: 16px; }
+-->
+</style>
+</head>
+
+<body>
+
+
+
+
+<div id="container">
+
+<div id="sitename">
+<h1>Innovakids </h1>
+Your Online Classroom designed for Individual Learning Plans		  
+
+      
+
+</div>
+
+<div id="mainmenu">
+<ul>
+<li><a href="http://www.innovakids.com/">Logout</a></li>
+<li><a class="current" >My Classes</a></li>
+<li><a > Gradebook</a></li>
+<li><a >Lessons</a></li>
+<li><a >Assessments</a></li>
+<li><a >Homework</a></li>
+</ul>
+</div>
+ 
+<div id="wrap">
+
+<div id="leftside">
+<h1>Menu</h1>
+<p>
+
+<a class="nav active"  href=astudentlogin.html>student login </a><span class="hide"> | </span>
+<a class="nav"  href=ateacherlogin.html>teacher login </a><span class="hide"> | </span>
+<a class="nav"  href="isignup.html">Parent login </a><span class="hide"> | </span>
+<a class="nav" >References and faqs </a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:teacherinfo.submit()>tutorial	</a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:teacheradd.submit()>prices</a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:addaclass.submit()>free trial </a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:addaschool.submit()>requirements</a></p>
+
+<h1>Reports</h1>
+<a class="nav sub" href="#">Teacher Summary</a></p>
+</div>
+
+<div id="rightside">
+
+
+
+</ul>
+<ul><h2>Features</h2>
+  <li class="text">Integrated Student 
+    Database</li>
+  <li class="text">Grade book</li>
+  <li class="text">Student Schedules</li>
+  <li class="text">Online Assessments</li>
+  <li class="text">Online Quizzes</li>
+  <li class="text">Online Lessons</li>
+  <li class="text">Automatic Emailing of Student Progress Reports </li>
+  <li class="text">Quizzes Integrated with online Lessons</li>
+  <li class="text">Administration Systems fully integrated</li>
+  <li class="text">Lesson Plan sharing</li>
+  <li class="text">Import quizzes from other teachers</li>
+  <li class="text">Progress Reports</li>
+  <li class="text">Parent communication</li>
+  <li class="text">Teacher and Student Observations</li>
+  <li class="text">Student Team Management</li>
+  <li class="text">Seating Charts</li>
+  <li class="text">Curriculum Plan </li>
+  <li class="text">Classroom Management</li>
+  <li class="text">Student Information Management </li>
+  <li class="text">Online Homework with ability for students to complete homework online </li>
+  <li class="text">Discipline - Online Referrals for Teachers with automatic printing on Progress Reports </li>
+  <li class="text">Individualize Learning Plans </li>
+</ul>
+<p></p>
+</div>
+
+<div id="content">
+
+<img src="images/picture_1.gif" height="122" width="71" alt="Thumbnail example" />
+<p class="intro">&nbsp;</p>
+<h1>Educational 
+Philosophy: </h1>
+<p class="intro">The
+  concept behind Innovakids.com is to create an inexpensive 
+  site where teachers can share lessons, quizzes and student 
+  information. This site includes many features all 
+  inclusive in one site allowing teachers and  staff to 
+  coordinate curriculum, lessons, schedules, assignments, 
+  discipline, grades homework, parent communication, online books and more. </p>
+<div class="col">
+  <form action="cgi-bin\getdata.pl" method="post">
+    <input type="hidden" size="20" name="LOGIN" value="YES" />
+    <input type="hidden" size="20" name="LOADOBJECTPAGE" value="astudentclasses.html" />
+    <table width="100%" height="111" border="1">
+      <tr>
+        <th width="40%" class="header_front_line" scope="col"><div align="left"><span class="text">Class  
+          / School ID:</span></div></th>
+        <th width="60%" scope="col"><div align="left"><span class="text">
+          <input name="SCHOOLNO" size="26" maxlength="255" style="FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: Verdana, Arial;" />
+        </span><span class="style13">This will be supplied by your teacher. </span></div></th>
+      </tr>
+      <tr>
+        <td class="header_front_line"><div align="left"><span class="text">Student ID:</span></div></td>
+        <td><div align="left"><span class="text">
+          <input name="STUDENTUSERID" size="26" maxlength="255" style="FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: Verdana, Arial;" />
+        </span></div></td>
+      </tr>
+      <tr>
+        <td class="header_front_line"><div align="left"><span class="text">Password: </span></div></td>
+        <td><div align="left"><span class="text">
+          <input name="PASSWORD" type="password" style="FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: Verdana, Arial;" size="26" maxlength="255" />
+        </span></div></td>
+      </tr>
+    </table>
+    <p align="center" class="content">Welcome to Innovakids. If you are interesting in a demo of this site for your school or class please login as Class ID = 1 and Student ID and Password = 2164. If you would be interesting in being part of the beta program for Innovakids.com please email us at sales@innovakids.com. Include your email address, name and school name. We will supply you with a 1 year free membership. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p align="left"><br />
+      &nbsp;<b>
+      <input type="submit" name="LOADFORM" value="SUBMIT" />
+    </p>
+  </form>
+  <h2><a href="http://www.easycounter.com/"><img src="http://www.easycounter.com/counter.php?rick2164,students"
+border="0" alt="Free Web Counter" /></a> <br />
+    <a href="http://www.easycounter.com/FreeCounter3.html">Student Visitors</a> </h2>
+  <div class="divider"></div>
+  <h2 align="right">&nbsp;</h2>
+</div>
+<p class="intro">&nbsp;</p>
+<p class="intro style1">Innovakids is free of charge. Signup today. </p>
+<h1><a href="isignup.html"> Press to Signup Now </a></h1>
+<p>&nbsp;</p>
+  
+
+</div>
+<div class="clearingdiv">&nbsp;
+  <p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div id="footer">
+  <p>&copy; 2007 Innovakids - Educational Software Company</p>
+  <p>adefault</p>
+</div>
+
+</body>
+</html>

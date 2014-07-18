@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Innovakids.com  - Online Schools</title>
+<META NAME="title" CONTENT="Learning, Society, Economy:Department">
+<META NAME="language" CONTENT="en">
+<META NAME="description" CONTENT="Innovakids.com, Online Classroom, Online School, webbased school,Classroom">
+<META NAME="keywords" CONTENT="Innovakids.com, Online Classroom, Online School, webbased school,Classroom">
+
+
+<link rel="stylesheet" href="andreas09.css" type="text/css" media="screen" />
+</head>
+
+<body>
+
+
+
+
+<div id="container">
+
+<div id="sitename">
+<h1>Innovakids </h1>
+^LOADDATAOBJECT:STUDENTSCHOOL.*-STUDENTNO=PRIMEKEY^			  
+
+          <h2 class="style8">^SCHOOL^<span class="style9">
+		  ^CITY^,
+		  ^STATE^</h2>
+
+</div>
+
+<div id="mainmenu">
+<ul>
+<li><a href="default.html">Logout</a></li>
+<li><a   href=javascript:myclasses.submit()>My Classes</a></li>
+<li><a   href=javascript:gradebook.submit()>Gradebook</a></li>
+<li><a    href=javascript:classlessons.submit()>Lessons</a></li>
+<li><a  class="current" href=javascript:assessments.submit()>Assessments</a></li>
+<li><a  href=javascript:homework.submit()>Homework</a></li>
+</ul>
+</div>
+ 
+<div id="wrap">
+
+<div id="leftside">
+<h1>Menu</h1>
+<p>
+
+<a class="nav active"  href=javascript:myclasses.submit()>My Classes </a><span class="hide"> | </span>
+<a class="nav"  href=javascript:notactive.submit()>My Inactive assessments </a><span class="hide"> | </span>
+<a class="nav"  href=javascript:enrollment.submit()>Class Enrollment</a><span class="hide"> | </span>
+<a class="nav" >Utilities</a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:manageseats.submit()>Manage Seats</a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:teams.submit()>class teams </a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:seating.submit()>seating chart </a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:discipline.submit()>discipline</a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:announcements.submit()>announcements</a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:discussions.submit()>discussions</a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:lessonplans.submit()>lessons plans </a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:observations.submit()>observations</a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:standards.submit()>state standards </a><span class="hide"> | </span>
+<a class="nav sub"  href=javascript:curriculum.submit()>curriculum</a></p>
+
+<h1>Reports</h1>
+<a class="nav sub" href="#">Teacher Summary</a></p>
+<a class="nav sub" href="#">Progress Reports</a></p>
+<a class="nav sub" href="#">Email Progress Reports</a></p>
+</div>
+
+
+
+<div id="content">
+
+<img src="lesson_menu.gif" height="100" width="100" alt="Thumbnail example" />
+^LOADDATAOBJECT:STUDENT.*-STUDENTNO=TEACHERNO^
+<p class="intro">^STUDENT^&nbsp; 
+(&nbsp;^TEACHERNO^)</p>
+^LOADDATAOBJECT:CLASSVIEW.*-CLASSNO=CLASSNO^
+<p class="intro">  ^CLASSINFO^ - &nbsp;  
+			   (^CLASSNO^)</p>
+			   
+<p class="intro"> <a href=javascript:editclass.submit()>Edit Class Information</a> </p>
+<p class="intro">&nbsp;</p>
+
+ 
+     
+   <p class="intro">&nbsp;</p> 
+          
+ <h1>Class Seating Chart </h1>			  
+        
+   </div> 	   
+  <div class="text" id="wrapper2">
+    <div class="col">
+     
+      <div align="left"> 
+^LOADDATAOBJECT:CLASS.*-CLASSNO=CLASSNO^ 
+</div>
+      <p> 
+^LOADMULTOBJECT:TEACHERCLASSES.STUDENTLESSON-TEACHERNO=PRIMEKEY^ </span> 
+      ^STUDENTLESSON^ </p>
+      <table width="711" height="496" border="1">
+       <TR bgcolor="#66CCFF">
+          <th class="nolink_title" scope="col"><div align="center"> 1<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=1^
+            ^STUDENT^ </div></th>
+          <th class="nolink_title" scope="col"><div align="center">2<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=2^
+            ^STUDENT^ </div></th>
+          <th class="nolink_title" scope="col"><div align="center">3<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=3^
+            ^STUDENT^ </div></th>
+          <th class="nolink_title" scope="col"><div align="center">4<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=4^
+            ^STUDENT^ </div></th>
+          <th class="nolink_title" scope="col"><div align="center">5<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=5^
+            ^STUDENT^ </div></th>
+          <th class="nolink_title" scope="col"><div align="center">6<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=6^
+            ^STUDENT^ </div></th>
+          <th class="nolink_title" scope="col"><div align="center">7<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=7^
+            ^STUDENT^ </div></th>
+          <th class="nolink_title" scope="col"><div align="center">8<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=8^
+            ^STUDENT^ </div></th>
+        </tr>
+        <tr>
+          <td class="nolink_title" scope="col"><div align="center">9<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=9^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title" scope="col"><div align="center">10<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=10^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title" scope="col"><div align="center">11<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=11^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title" scope="col"><div align="center">12<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=12^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title" scope="col"><div align="center">13<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=13^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title" scope="col"><div align="center">14<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=14^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title" scope="col"><div align="center">15<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=15^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title" scope="col"><div align="center">16<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=16^
+            ^STUDENT^ </div></td>
+        </tr>
+        <TR bgcolor="#66CCFF">
+          <td class="nolink_title"><div align="center">17<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=17^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">18<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=18^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">19<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=19^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">20<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=20^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">21<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=21^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">22<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=22^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">23<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=23^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">24<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=24^
+            ^STUDENT^ </div></td>
+        </tr>
+        <tr>
+          <td class="nolink_title"><div align="center">25<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=25^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">26<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=26^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">27<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=27^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">28<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=28^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">29<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=29^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">30<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=30^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">31<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=31^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">32<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=32^
+            ^STUDENT^ </div></td>
+        </tr>
+    <TR bgcolor="#66CCFF">
+          <td class="nolink_title"><div align="center">33<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=33^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">34<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=34^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">35<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=35^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">36<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=36^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">37<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=37^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">38<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=38^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">39<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=39^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">40<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=40^
+            ^STUDENT^ </div></td>
+        </tr>
+        <tr>
+          <td class="nolink_title"><div align="center">41<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=41^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">42<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=42^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">43<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=43^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">44<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=44^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">45<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=45^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">46<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=46^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">47<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=47^
+            ^STUDENT^ </div></td>
+          <td class="nolink_title"><div align="center">48<br />
+^LOADDATAOBJECT:STUDENTSEATS.STUDENT-SEAT=48^
+            ^STUDENT^ </div></td>
+        </tr>
+      </table>
+      <p> </font> </p>
+      <h2> </h2>
+  
+  </div>
+  <p class="intro">  </p>
+  <h2>&nbsp;</h2>
+</div>
+<div class="clearingdiv">&nbsp;</div>
+</div>
+</div>
+<div id="footer">
+  <p>&copy; 2007 Innovakids - Educational Software Company</p>
+  <p>ateacherassessmentpage1</p>
+</div>
+^LOADDATAOBJECT:STUDENTSCHOOL.*-STUDENTNO=PRIMEKEY^	
+<form NAME=period ACTION=getdata.pl METHOD=POST>
+
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasslist.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=SORT VALUE="PERIOD">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+<form NAME=name ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasslist.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=SORT VALUE="STUDENT">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+<form NAME=enrollment ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasslist.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=SORT VALUE="PERCENT">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+<form NAME=teacherinfo ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=aTEACHERINFO1.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+<form NAME=addaclass ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=aTEACHERCLASSADD1.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+ <form NAME=addaschool ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=aTEACHERSCHOOLADD.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+
+</form>	
+
+
+ <form NAME=myclasses ACTION=getdata.pl METHOD=POST>
+
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasses.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+</form>
+
+<form NAME=progress  TARGET=_blank ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=classprogressreport.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+ </form>
+
+<form NAME=assessments ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherassessmentpage1.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+</form>
+
+<form NAME=homework ACTION=getdata.pl METHOD=POST>
+  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherhomeworkclass.html>
+  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+  <input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+  <input type=HIDDEN NAME=SORT VALUE="STUDENT">
+  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+  <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+<form NAME=gradebook ACTION=getdata.pl METHOD=POST>
+
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherlessongrades2.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=SORT VALUE="STUDENT">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>				
+			  
+<form NAME=teams ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherteampage1.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=SORT VALUE="STUDENT">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>					  
+			 
+			 
+<form NAME=seating ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclassseating.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=SORT VALUE="STUDENT">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>				  
+
+<form NAME=discipline ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherdiscipline1.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=SORT VALUE="DUEDATE">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>		
+
+<form NAME=discussions ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherblogpage1.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=SORT VALUE="DUEDATE">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+<form NAME=announcements ACTION=getdata.pl METHOD=POST>
+  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherannounceclass.html>
+  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+  <input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+  <input type=HIDDEN NAME=SORT VALUE="STUDENT">
+  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+  <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+<form NAME=curriculum ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateachercurriculumlist.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=SORT VALUE="DUEDATE">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>		
+
+<form NAME=addstudenttoclass ACTION=getdata.pl METHOD=POST>
+  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasslistadd.html>
+  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+  <input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+  <input type=HIDDEN NAME=SORT VALUE="STUDENT">
+  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+  <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+ <form NAME=classlessons ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasspage1.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form> <form NAME=addlesson ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherlessonadd1.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>				
+
+<form NAME=editclass ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclassedit.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=SORT VALUE="STUDENT">
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+                <form NAME=addannounce ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherannounceadd.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+ <form NAME=lessonplans ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherlessonplans.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+ <form NAME=observations ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherobservations.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+<form NAME=standards ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherstandards.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+<form NAME=pacingguide ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherpacingguide.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+<form NAME=myschools ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherschools.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+<form NAME=teacheradd ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherinfo1add.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+<form NAME=mystudents ACTION=getdata.pl METHOD=POST>
+  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasslistedit.html>
+  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+     <input type=HIDDEN NAME=FIELD VALUE="STUDENT">
+   <input type=HIDDEN NAME=GRADE VALUE="A">
+  <input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+  <input type=HIDDEN NAME=SORT VALUE="STUDENT">
+  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+  <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+<form NAME=notactive ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasspage1na.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+<form NAME=newversion ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ateacherclasses.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+
+
+</body>
+</html>

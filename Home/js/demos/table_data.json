@@ -1,0 +1,47 @@
+{
+  "id": -1,
+  "fieldErrors": [],
+  "sError": "",
+  "aaData": [
+    {
+      "DT_RowId": "row_1",
+      "classno": "1",
+      "code": "SCI103",
+      "description": "Earth Science 103",
+      "teacher": "Ms. M. Smith",
+      "room": "322A"
+    },
+    {
+      "DT_RowId": "row_2",
+       "classno": "2",
+      "code": "SCI243",
+      "description": "Earth Science 243",
+      "teacher": "Ms. M. Smith",
+      "room": "322A"
+    },
+    {
+      "DT_RowId": "row_3",
+	   "classno": "3",
+      "code": "SCI101",
+      "description": "Biology Science 101",
+      "teacher": "Ms. M. Jones",
+      "room": "322A"
+    },
+    {
+      "DT_RowId": "row_4",
+       "classno": "4",
+      "code": "ENG201",
+      "description": "BRITISH POETRY",
+      "teacher": "Mr James Mike",
+      "room": "422A"
+    },
+    {
+      "DT_RowId": "row_5",
+       "classno": "5",
+      "code": "HST202",
+      "description": "WORLD HISTORY",
+      "teacher": "Mr R Gona",
+      "room": "522A"
+    }
+  ]
+}

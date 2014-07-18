@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Innovakids.com  - Online Schools</title>
+<META NAME="title" CONTENT="Learning, Society, Economy:Department">
+<META NAME="language" CONTENT="en">
+<META NAME="description" CONTENT="Innovakids.com, Online Classroom, Online School, webbased school,Classroom">
+<META NAME="keywords" CONTENT="Innovakids.com, Online Classroom, Online School, webbased school,Classroom">
+
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+<!--
+.style4 {font-size: 18px}
+.style5 {color: #0000FF}
+.style7 {color: #0099FF}
+.style8 {
+	color: #FFFFFF;
+	font-size: 14px;
+}
+.style14 {color: #3399FF; font-size: 14; }
+.style16 {color: #0000FF; font-size: 14px; }
+.style17 {color: #000000}
+.style18 {
+	font-size: 12px;
+	color: #0099FF;
+}
+.style20 {font-size: 10}
+.style22 {color: #FFFF00; font-size: 10px; }
+.style23 {font-size: 10px}
+-->
+    </style>
+</head>
+
+<body>
+<form NAME=teacherinfo ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=iTEACHERINFO1.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+<form NAME=addaclass ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=ITEACHERCLASSADD1.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+<form NAME=importlesson ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=iTEACHERIMPORT.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+
+ <form NAME=addaschool ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=iTEACHERSCHOOLADD.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+
+</form>	
+
+  <div id="wrapper">
+      <div id="menu">
+          <h2 class="style4"><span class="style5">  &nbsp; &nbsp;Innova</span><span class="style7">kids</span></h2>
+          <ul id="navblue">
+              <li class="style8">
+			  
+			    Logged In
+                 
+			
+			  </li>
+            
+        </ul>
+      </div><!-- end menu -->
+      <div id="header">
+          <ul id="navtop">
+              <li><a href="http://www.innovakids.com">Logout</a>              </li>
+               <li><a href=contactus.html>Contact us </a></li>
+              <li><a href=emailus.html>Email Teacher </a></li>
+        </ul>
+^LOADDATAOBJECT:STUDENTSCHOOL.*-STUDENTNO=PRIMEKEY^			  
+          <h2 class="style8">^SCHOOL^<span class="style9">
+		  <br />^CITY^
+		  <br />^STATE^
+^LOADDATAOBJECT:STUDENT.*-STUDENTNO=PRIMEKEY^
+<span class="style22">  <br /> ^STUDENT^&nbsp; 
+(&nbsp;^TEACHERNO^) </span></h2>		  
+<ul id="explore">
+              <li></li>
+          </ul>
+          <div id="books"></div>
+          <div id="girl"></div>
+      </div>
+      <!-- end header -->
+      <div class="divider"></div>
+      <!-- end searchbar -->
+<div id="orangerow">
+          
+          <div class="nav">
+              <h2 id="categories">School Info</h2>
+              <ul>
+                  <li>
+^LOADMULTOBJECT:SCHOOLANNOUNCEMENTS.COMMENTS-SCHOOLNO=SCHOOLNO^								
+               <span class="submit style20"> ^COMMENTS^</span> </li>
+                  <li><br />
+				  
+				 
+             
+                  <li> <a href=javascript:teacherinfo.submit()>Teacher Info</a></li>
+                   <li> <a href=javascript:addaclass.submit()>Add a Class</a></li>
+				    <li> <a href=javascript:addaschool.submit()>Add a School</a></li>
+                  <li></li>
+                 
+                  <li></li>
+             
+        
+				  
+				  
+				  </li>
+              </ul>
+          </div><!-- end .nav -->
+          
+          <div class="col">
+              <div class="left" id="authormonth">
+                 
+                  <p class="style14"> 
+^LOADMULTOBJECT:SCHOOLLIST.SCHOOLNAME-TEACHERNO=TEACHERNO^								
+                   		  
+		            <span class="style16"> <span class="style18"></span><br /> 
+	                </span> 
+					        <span class="style5"><br />Other Schools you Administer:</span>&nbsp;&nbsp;
+		                    <span class="style17"><br />
+                    <span class="style7">^SCHOOLNAME^</span><span class="style5"></span></span> </p>
+            </div>
+              <!-- end authormonth -->
+              <div id="bookmonth">
+                 <br />
+                 
+                   
+				 <div align="center"><br /><br />	<br /><br />  
+				<img src="importsubjects.jpg" width="80" height="80" border="0" />
+				  
+              <h2><span class="style1">Import from Lesson Library:  <a href=javascript:importlesson.submit()>(Import) </a></span></h2>
+
+                  </div>
+            </div><!-- end bookmonth -->
+          </div><!-- end .col -->
+          <div id="whitey"></div>
+          <div class="clear"><div class="fix"></div></div>
+    </div><!-- end orangerow -->
+      
+      <div id="greenrow">
+          
+          <div class="nav">
+              <h2 id="discounts">Related Links </h2>
+              <ul>
+                  <li><a target=_blank href="http://www.educationindex.com/education_resources.html">Education</a></li>
+                  <li><a href="http://dictionary.reference.com/" target="_blank">Dictionary </a></li>
+                  <li><a target=_blank href="http://www.wikipedia.org">Encyclopedia </a></li>
+                  <li><a  target=_blank href="http://www.homeworkhelper.com">Homework Helper</a></li>
+                  <li></li>
+              </ul>
+          </div><!-- end .nav -->
+          
+          <div class="col">
+              <h2> <h2 class="col"><a href = "javascript:history.back()"> <img src="BACKBUTTON.JPG" width="30" height="33" border="0" /></a>&nbsp;Teacher's Current Classes</h2>
+^LOADMULTOBJECT:TEACHERCLASS.TEACHERCLASS-TEACHERNO=TEACHERNO^               
+			 <span class="style23">  ^TEACHERCLASS^</span>
+            <p>&nbsp;</p>
+              <p></p>
+				<div class="divider"></div>
+          
+              <h2>&nbsp;</h2>
+        </div>
+          <div class="clear"></div>
+      </div><!-- end greenrow -->
+      
+      <div id="footer">
+          <div id="footeri"><span class="copyright">Copyright 2007 Innovakids.com </span> 
+               iteacherclasses&nbsp;
+              &nbsp;
+              &nbsp;
+             &nbsp;          </div>
+          <!-- end footeri -->
+      </div><!-- end footer -->
+  </div><!-- end wrapper -->
+</body>
+</html>

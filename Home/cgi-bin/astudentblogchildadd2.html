@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Innovakids.com  - Online Schools</title>
+<META NAME="title" CONTENT="Learning, Society, Economy:Department">
+<META NAME="language" CONTENT="en">
+<META NAME="description" CONTENT="Innovakids.com, Online Classroom, Online School, webbased school,Classroom">
+<META NAME="keywords" CONTENT="Innovakids.com, Online Classroom, Online School, webbased school,Classroom">
+<script type="text/javascript" >
+function init(){
+	empty_mc = document.getElementById('empty');
+	dummy_mc = document.getElementById('dummy');
+	empty_mc.onclick = moveSquare;
+	zz = new Tween(dummy_mc.style,'left','',parseInt(dummy_mc.style.left),10,1,'px');
+	zzz = new Tween(dummy_mc.style,'top','',parseInt(dummy_mc.style.top),10,1,'px');
+}
+function moveSquare(evt){
+		if(!evt) evt = window.event;
+		var x = evt.offsetX || evt.layerX;
+		var y = evt.offsetY || evt.layerY;
+		var duration = document.getElementById('myDuration').value;
+		var easingFunc = eval(document.getElementById('easingSelect').value);
+		isNaN(duration) ? duration = 1 : null;
+		zz.func = easingFunc;
+		zz.continueTo(x,duration);
+		zzz.func = easingFunc;
+		zzz.continueTo(y,duration);
+		
+}
+</script>
+
+
+<link rel="stylesheet" href="andreas09.css" type="text/css" media="screen" />
+<script type="text/javascript" src="prototype.js"></script>
+<script type="text/javascript" src="scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="lightbox.js"></script>
+<link rel="stylesheet" href="lightbox.css" type="text/css" media="screen" />
+
+<style type="text/css">
+
+/* This is only a demonstration of the included colors in the andreas09 template. Don't use this file as a starting point when you use the template, use the included index.html or 2col.html instead! */
+
+#container{background:#f0f0f0 url(alt-img/bodybg-green.jpg) repeat-x;}
+#mainmenu a:hover{background:#f0f0f0 url(alt-img/menuhover-green.jpg) top left repeat-x;}
+#mainmenu a.current{background:#f0f0f0 url(alt-img/menuhover-green.jpg) top left repeat-x;}
+.style22 {
+	letter-spacing:-1px;
+	font-weight: bold;
+	font-size: 12;
+}
+.style23 {font-size: 12px}
+.style24 {color: #FF0000}
+</style>
+</head>
+
+<body>
+
+
+
+
+<div id="container">
+
+<div id="sitename">
+<h1>Innovakids </h1>
+^LOADDATAOBJECT:STUDENTSCHOOL.*-STUDENTNO=PRIMEKEY^			  
+
+          <h2 class="style8">^SCHOOL^<span class="style9">
+		  ^CITY^,
+		  ^STATE^</h2>
+
+</div>
+
+<div id="mainmenu">
+<ul>
+<li><a href="http://www.innovakids.com/">Logout</a></li>
+<li><a class="current"  href=javascript:myclasses.submit() >My Classes</a></li>
+<li><a href=javascript:grades.submit()> grades </a></li>
+<li><a href=javascript:current.submit()>Lessons</a></li>
+<li><a href=javascript:assessments.submit()>Assessments</a></li>
+<li><a href=javascript:homework.submit()>Homework</a></li>
+</ul>
+</div>
+ 
+<div id="wrap">
+
+<div id="leftside">
+<h1>Menu</h1>
+<p>
+
+<a class="nav active"  href=javascript:myclasses.submit()>My Classes </a><span class="hide"> | </span>
+
+<a class="nav active"  href=javascript:current.submit()>Current Lessons</a><span class="hide"> | </span>
+<a class="nav active"  href=javascript:completed.submit()>completed  Lessons</a><span class="hide"> | </span>
+<p>
+<a class="nav active"  href=javascript:discussions.submit()>Lesson Discussions</a><span class="hide"> | </span>
+
+<h1>Reports</h1>
+<a class="nav "  href=javascript:noteprint.submit()>Print Lesson Notes</a><span class="hide"> | </span><span class="hide"> | </span><span class="hide"> | </span><span class="hide"> | </span>
+<p>
+<h1>My Rewards</h1>
+<a class="nav "  href=javascript:rewards.submit()>Class Rewards I've earned </a><span class="hide"> | </span>
+<p>
+<h1>Current Score</h1>
+   ^CURRENTSCORE^
+</div>
+
+<div id="rightside">
+<h1>Question Information</h1>
+^LOADDATAOBJECT:CONCEPT.*-LESSONNO=LESSONNO^
+<p class="intro">
+  <span class="style23">Page: &nbsp; <span class="style24">^ORDERNO^</span></span><br /> 
+  Lesson (^LESSONNO^)&nbsp;<br>
+  ^CONCEPT^<br /> 
+  <font color="#006092">^TEXTCAPTION^</font>
+  <font color="#FF0000"><p>
+  </font>
+  </font><p>
+  <font color="#FF0000" size="3">Last Question: ^LASTANSWER^</font><p>
+ 		<br />
+		
+
+		 <a href="^FILENAME^" rel="lightbox" 
+		 title="^TEXTCAPTION^">  
+View Image Larger</a><br /><br />
+
+<h1>Student Information </h1>
+
+^LOADDATAOBJECT:STUDENT.*-STUDENTNO=PRIMEKEY^	
+ <p class="intro"> 
+  ^STUDENT^ 
+  (^STUDENTNO^)<br />
+GRADE: ^GRADE^</h2>
+<p>&nbsp;</p>
+
+<h1>Class Information </h1>
+
+<p class="intro">
+  
+^LOADDATAOBJECT:CLASSVIEW.*-CLASSNO=CLASSNO^ 
+  
+    <span class="intro"><span class="intro"></span></p>
+<p class="intro"> ^CLASSINFO^  </p>
+<p>&nbsp;</p>
+
+<h1>Class Links:</h1>
+<p>&nbsp;</p>
+^LOADMULTOBJECT:CLASSLINKS.COMMENTS-CLASSNO=CLASSNO^	
+                    ^COMMENTS^	
+
+</ul>
+</div>
+
+<div id="content">
+  <p>&nbsp;</p>
+
+
+<img src="class_menu.gif" height="100" width="100" alt="Thumbnail example" />
+
+  <h1>Lesson Discussion    </h1>
+  <p>
+^LOADDATAOBJECT:CONCEPT.*-LESSONNO=LESSONNO^
+<span class="intro"> ^LESSONNO^ - 
+      ^CONCEPT^</span>
+
+^LOADDATAOBJECT:BLOG.*-BLOGID=BLOGID^
+    <span class="intro"> <br /><br /><br />(^BLOGID^) 
+      ^COMMENTS^ </span><br />
+	  <p>&nbsp;</p>
+	  
+	
+    <form NAME=getnextpage68 ACTION=getdata.pl METHOD=POST>
+ 	<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=istudentblogchild.html>
+	<input type=HIDDEN NAME=WHERE VALUE=BLOGID>
+	<input type=HIDDEN NAME=WHEREKEY VALUE=^BLOGID^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^PRIMEKEY^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=TABLE VALUE=BLOG>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=BLOG.PARENTBLOG VALUE=^BLOGID^> 
+<input type=HIDDEN NAME=BLOGID VALUE=^PARENTBLOG^> 
+ 
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+                  <label>Add your comment to the Discussion here...<br>
+
+				  <input type=HIDDEN NAME=BLOG.CLASSNO VALUE=^CLASSNO^>
+				  <input type=HIDDEN NAME=BLOG.LESSONNO VALUE=^LESSONNO^>
+				  <input type=HIDDEN NAME=BLOG.STUDENTNO VALUE=^STUDENTNO^>
+                  <textarea name="BLOG.COMMENTS" cols="50" rows="5"></textarea>
+                  </label>
+                  <p>
+                   
+					<input type=HIDDEN NAME=LOADFORM VALUE=INSERT>
+     <a href=javascript:getnextpage68.submit()>Press to Save Comment</a>
+                    </label>
+                  </p>
+              </form>	
+			  
+              <p>Other Student's Comments to this Discussion</p>
+              <p>
+^LOADMULTOBJECT:BLOGCHILD.COMMENTS-LESSONNO=LESSONNO^
+				      
+		       ^COMMENTS^ 			  
+			  
+			   </p>
+^LOADDATAOBJECT:PARENTBLOG.*-LESSONNO=LESSONNO^	
+
+		  
+                          <form name=getnextpage180 action=getdata.pl method=POST>
+                         <input type=HIDDEN name=LOADOBJECTPAGE value=aSTUDENTBLOGCHILDADD2.HTML>
+                        <input type=HIDDEN name=PRIMEKEY value=^STUDENTNO^>
+                        <input type=HIDDEN name=STUDENTNO value=^STUDENTNO^>
+                       
+                        <input type=HIDDEN name=PERIOD value=^PERIOD^>
+						<input type=HIDDEN name=BLOGID value=^BLOGID^>
+                       <input type=HIDDEN name=LESSONNO value=^LESSONNO^>
+                        <input type=HIDDEN name=ORDERNO value=^ORDERNO^>
+					    <input type=HIDDEN name=CLASSNO value=^CLASSNO^>
+                        <input type=HIDDEN name=LOADFORM value=SUBMIT>
+                        <a href=javascript:getnextpage180.submit()>Click HERE to Add a Comment to the discussion</a>
+                </form>
+
+
+  </h1>
+  <h4></h4>
+</div>
+<div class="clearingdiv">&nbsp;
+  <p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div id="footer">
+  <p>&copy; 2007 Innovakids - Educational Software Company</p>
+  <p>alessonpage1 - Revised </p>
+</div>
+^LOADDATAOBJECT:STUDENTSCHOOL.*-STUDENTNO=PRIMEKEY^	
+<form NAME=myclasses ACTION=getdata.pl METHOD=POST>
+                <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=astudentclasses.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN name=PERIOD value=^PERIOD^>
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+<form NAME=grades ACTION=getdata.pl METHOD=POST>
+                <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=aSTUDENTCLASSGRADESPAGE1.HTML>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN name=PERIOD value=^PERIOD^>
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>
+
+<form NAME=completed ACTION=getdata.pl METHOD=POST>
+               
+                  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=aSTUDENTCLASSCOMPLETEPAGE1.HTML>
+                  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+                  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+                  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+                  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+                  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+                </form>
+				
+<form NAME=current ACTION=getdata.pl METHOD=POST>
+               
+                  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=astudentclasspage1.HTML>
+                  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+                  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+                  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+                  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+                  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+                 
+                </form>	
+				
+<form NAME=discussions ACTION=getdata.pl METHOD=POST>
+               
+                  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=aSTUDENTCLASSBLOG1.HTML>
+                  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+                  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+                  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+                  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+                  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+                 
+                </form>					
+<form NAME=assessments ACTION=getdata.pl METHOD=POST>
+               
+                  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=astudentassessmentpage1.HTML>
+                  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+                  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+                  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+                  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+                  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+                 
+                </form>		
+				<form NAME=homework ACTION=getdata.pl METHOD=POST>
+               
+                  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=aSTUDENTHOMEWORKPAGE1.HTML>
+                  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+                  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+                  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+                  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+                  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+                </form>
+				
+		<form NAME=rewards ACTION=getdata.pl METHOD=POST>
+               
+                  <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=aSTUDENTREWARDS2.HTML>
+                  <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+                  <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+                  <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+                  <input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+                  <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+                  <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+                 
+                </form>						
+				
+
+			
+			<form NAME=email target=_blank ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=istatusemail.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=EMAIL VALUE=STUDENTPROGRESSREPORT>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="NO">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>	
+				
+					<form NAME=schedule target=_blank ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=istatusemail.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=REPORT VALUE=SCHEDULE>
+     <input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+</form>									
+						
+
+
+
+	
+				
+	
+				
+<form target=_blank NAME=progress ACTION=getdata.pl METHOD=POST>
+                <input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=iSTUDENTPROGRESSREPORT.HTML>
+                <input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+                <input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+                <input type=HIDDEN NAME=STUDENTNO VALUE=^STUDENTNO^>
+                <input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+                <input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+                <input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+                <input type=HIDDEN name=PERIOD value=^PERIOD^>
+				   <input type=HIDDEN NAME=iSTUDENTPROGRESSREPORT VALUE=^STUDENTNO^>
+                <input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+             
+</form>					
+
+
+<form NAME=noteprint  TARGET=_blank ACTION=getdata.pl METHOD=POST>
+<input type=HIDDEN NAME=LOADOBJECTPAGE VALUE=iLESSONNOTES.html>
+<input type=HIDDEN NAME=LESSONNO VALUE=^LESSONNO^>
+<input type=HIDDEN NAME=PRIMEKEY VALUE=^STUDENTNO^>
+<input type=HIDDEN NAME=ORDERNO VALUE=^ORDERNO^>
+<input type=HIDDEN NAME=PERIOD VALUE=^PERIOD^>
+<input type=HIDDEN NAME=TEACHERNO VALUE=^TEACHERNO^>
+<input type=HIDDEN NAME=CLASSNO VALUE=^CLASSNO^>
+<input type=HIDDEN NAME=LOADFORM VALUE=SUBMIT>
+<input type="HIDDEN" size="20" name="TEACHER" VALUE="YES">
+
+</form>		
+
+
+</body>
+</html>
